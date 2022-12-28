@@ -8,6 +8,7 @@
 		<version>3.0.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.newspring</groupId>
 	<artifactId>demo1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
