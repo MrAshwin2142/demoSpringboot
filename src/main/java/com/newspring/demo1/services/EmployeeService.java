@@ -14,18 +14,18 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepo employeeRepo;
 
+    // add employee
     public Employee  saveEmployee(Employee e){
         employeeRepo.save(e);
         return e;
     }
 
-
-
-
+    //get all employee
     public List<Employee> getAllEmployees(){
         return (List<Employee>) employeeRepo.findAll();
     }
 
+    // get employee by id
     public Employee getEmployeeById(int id){
         Optional<Employee> e=employeeRepo.findById(id);
         if(e.isPresent()){
@@ -35,6 +35,7 @@ public class EmployeeService {
         }
     }
 
+    // update employee
     public Optional<Employee> updateEmployee(Employee e,int emp_id){
         Optional<Employee> temprary= employeeRepo.findById(emp_id);
         if(temprary.isPresent() ){
@@ -45,10 +46,8 @@ public class EmployeeService {
         return null;
     }
 
+    //delete employee
     public void deleteEmployee(int id){
         employeeRepo.deleteById(id);
     }
-
-
-
 }
